@@ -1,0 +1,207 @@
+body {
+    background-image: url('1234.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    font-family: "serif";
+    overflow-y: auto;
+
+}
+
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideInFromTop 1s ease;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: slideInFromTop 1s ease;
+}
+
+form input,
+form button {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    background: white;
+    transition: background-color 1s ease, color 0.3s ease;
+    animation: slideInFromTop 1s ease;
+}
+
+form button:hover {
+    background-color: #a9a9a9;
+    color: #000000;
+}
+
+form input {
+    min-width: 30%;
+}
+
+form button {
+    color: #000000;
+    background: #f7fffe;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+form button:hover {
+    background: #a9a9a9;
+    color: #000000;
+}
+
+form input:focus {
+    outline: none;
+}
+
+.todo-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideInFromBottom 1s ease;
+}
+
+.todo-elem {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: white;
+    font-size: 1.5rem;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.todo li {
+    flex: 1;
+    margin: 10px;
+}
+
+.complete-btn,
+.trash-btn {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 1rem;
+}
+
+.complete-btn:hover,
+.trash-btn:hover {
+    background-color: #a9a9a9;
+    color: #000000;
+}
+
+.fa-check,
+.fa-trash-alt {
+    pointer-events: none;
+}
+
+.completed {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.out {
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: #000000;
+    width: 12rem;
+    cursor: pointer;
+    height: 3.2rem;
+    padding: 1rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background-color: #f0f0f0;
+    color: #000000;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.select:hover::after {
+    background-color: #a9a9a9;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(169, 169, 169, 0.7);
+    padding: 10px 20px;
+    text-align: center;
+    animation: slideInFromBottom 1s ease;
+}
+footer .copyright {
+    color: black;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
